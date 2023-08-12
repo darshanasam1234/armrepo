@@ -1,27 +1,12 @@
-# Starter pipeline
-
-# Start with a minimal pipeline that you can customize to build and deploy your code.
-# Add steps that build, run tests, deploy, and more:
-# https://aka.ms/yaml
-
-trigger:
-- main
-
-pool:
-  vmImage: ubuntu-latest
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
-  condition: - task: AzureResourceManagerTemplateDeployment@3
+- task: AzureResourceManagerTemplateDeployment@3
   inputs:
     deploymentScope: 'Resource Group'
     azureResourceManagerConnection: 'azurearm'
     subscriptionId: 'd1a072bc-69ca-42c9-b02c-648ba7862db2'
     action: 'Create Or Update Resource Group'
     resourceGroupName: 'apj'
-    location: 'Australia East'
-    templateLocation: 'Linked artifact'
-    csmFile: 'https://github.com/darshanasam1234/armrepo/blob/main/storage.json'
-    csmParametersFile: 'https://github.com/darshanasam1234/armrepo/blob/main/storage.parameters.json'
+    location: 'Brazil US'
+    templateLocation: 'URL of the file'
+    csmFileLink: 'https://djastoragej123jay.blob.core.windows.net/templates/storage.json'
+    csmParametersFileLink: 'https://djastoragej123jay.blob.core.windows.net/templates/storage.parameters.json'
     deploymentMode: 'Incremental'
