@@ -14,6 +14,6 @@ steps:
     resourceGroupName: 'apj'
     location: 'Brazil US'
     templateLocation: 'URL of the file'
-    csmFileLink: 'https://djastoragej123jay.blob.core.windows.net/templates/vm.json'
+    csmFileLink: 'https://dev.azure.com/darshanaj/_git/armtemplate?path=/vm.json'
     csmParametersFileLink: 
     deploymentMode: 'Incremental'
